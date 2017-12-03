@@ -1,0 +1,26 @@
+DEVICE={{ item.value.vmgenesis_interface_name | default('ens160') }}
+NAME={{ item.value.vmgenesis_interface_name | default('ens160') }}
+NM_CONTROLLED="no"
+ONBOOT=yes
+TYPE=Ethernet
+BOOTPROTO=static
+
+#DNS1=
+#DNS2=
+#PEERDNS=no
+#DOMAIN=
+
+IPV6INIT=no
+IPV6_AUTOCONF=no
+IPV6_DEFROUTE=no
+IPV6_PEERDNS=no
+IPV6_PEERROUTES=no
+IPV6_ADDR_GEN_MODE=stable-privacy
+IPV6_FAILURE_FATAL=no
+
+IPADDR={{ item.value.vmgenesis_address }}
+NETMASK={{ item.value.vmgenesis_netmask }}
+GATEWAY={{ item.value.vmgenesis_gateway }}
+DEFROUTE=yes
+PEERROUTES=no
+IPV4_FAILURE_FATAL=no
